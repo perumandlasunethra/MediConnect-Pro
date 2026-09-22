@@ -1,0 +1,752 @@
+* {
+  box-sizing: border-box;
+  }
+
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: linear-gradient(135deg, #e8f9fb, #f5fbff);
+color: #263238;
+}
+
+.container {
+width: 90%;
+max-width: 1100px;
+margin: 40px auto;
+}
+
+/* Hero Section */
+
+.hero {
+text-align: center;
+padding: 35px 20px;
+background: white;
+border-radius: 25px;
+box-shadow: 0 12px 35px rgba(0, 100, 120, 0.12);
+}
+
+.medical-icon {
+font-size: 55px;
+}
+
+.hero h1 {
+margin: 10px 0;
+font-size: 44px;
+color: #087f8c;
+}
+
+.hero p {
+font-size: 22px;
+color: #455a64;
+margin: 10px 0;
+}
+
+.hero span {
+color: #78909c;
+font-size: 15px;
+}
+
+/* Doctor and Patient */
+
+.role-container {
+display: flex;
+justify-content: center;
+align-items: stretch;
+gap: 35px;
+margin-top: 35px;
+}
+
+.role-card {
+width: 400px;
+padding: 35px;
+text-align: center;
+background: white;
+border-radius: 22px;
+box-shadow: 0 10px 30px rgba(0, 80, 120, 0.12);
+transition: 0.3s;
+}
+
+.role-card:hover {
+transform: translateY(-7px);
+box-shadow: 0 18px 40px rgba(0, 80, 120, 0.20);
+}
+
+/* Icon beside heading */
+
+.role-header {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 12px;
+}
+
+.role-icon {
+font-size: 45px;
+}
+
+.role-header h3 {
+margin: 0;
+font-size: 28px;
+color: #087f8c;
+}
+
+.role-card p {
+color: #607d8b;
+line-height: 1.6;
+min-height: 50px;
+}
+
+/* Buttons */
+
+.dashboard-link {
+display: block;
+padding: 13px;
+margin: 12px 0;
+background: linear-gradient(135deg, #087f8c, #13a8b5);
+color: white;
+border-radius: 10px;
+font-weight: bold;
+text-decoration: none;
+transition: 0.3s;
+}
+
+.dashboard-link:hover {
+transform: translateY(-2px);
+box-shadow: 0 7px 18px rgba(8, 127, 140, 0.25);
+}
+
+/* Footer */
+
+.footer {
+text-align: center;
+margin-top: 30px;
+color: #78909c;
+font-size: 14px;
+}
+
+/* Mobile */
+
+@media (max-width: 750px) {
+
+.container {
+    width: 94%;
+    margin: 20px auto;
+}
+
+.hero h1 {
+    font-size: 34px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.role-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.role-card {
+    width: 100%;
+}
+}
+.form-card {
+max-width: 450px;
+margin: 25px auto;
+padding: 25px 30px;
+}
+
+.form-card form {
+text-align: left;
+}
+
+.form-card label {
+display: block;
+margin-top: 12px;
+margin-bottom: 5px;
+font-weight: bold;
+color: #455a64;
+}
+
+.form-card input,
+.form-card select {
+width: 100%;
+padding: 10px;
+border: 1px solid #cfd8dc;
+border-radius: 8px;
+font-size: 14px;
+outline: none;
+}
+
+.form-card input:focus,
+.form-card select:focus {
+border-color: #087f8c;
+box-shadow: 0 0 5px rgba(8, 127, 140, 0.2);
+}
+
+.form-card input[type="submit"] {
+border: none;
+cursor: pointer;
+margin-top: 18px;
+}
+
+.form-card > p {
+color: #607d8b;
+min-height: auto;
+margin-top: 18px;
+}
+
+.form-card > a:last-child {
+color: #087f8c;
+text-decoration: none;
+font-weight: bold;
+}
+
+
+.registration-hero {
+padding: 20px 15px;
+}
+
+.registration-hero .medical-icon {
+font-size: 40px;
+}
+
+.registration-hero h1 {
+font-size: 32px;
+margin: 5px 0;
+}
+
+.registration-hero p {
+font-size: 16px;
+margin: 5px 0;
+}
+
+/* patient dashboard */
+
+.dashboard-container {
+width: 92%;
+max-width: 1150px;
+margin: 30px auto;
+}
+
+.dashboard-header {
+background: white;
+padding: 22px 30px;
+border-radius: 18px;
+box-shadow: 0 8px 25px rgba(0, 80, 120, 0.10);
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.dashboard-header h1 {
+margin: 0;
+color: #087f8c;
+font-size: 30px;
+}
+
+.dashboard-header p {
+margin: 6px 0 0;
+color: #78909c;
+}
+
+.logout-btn {
+text-decoration: none;
+background: #e85d5d;
+color: white;
+padding: 10px 20px;
+border-radius: 9px;
+font-weight: bold;
+}
+
+.logout-btn:hover {
+background: #d94c4c;
+}
+
+.patient-banner {
+margin-top: 25px;
+padding: 28px 35px;
+border-radius: 20px;
+background: linear-gradient(135deg, #087f8c, #13a8b5);
+color: white;
+display: flex;
+align-items: center;
+gap: 22px;
+box-shadow: 0 10px 30px rgba(0, 100, 120, 0.18);
+}
+
+.patient-avatar {
+width: 75px;
+height: 75px;
+background: white;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 40px;
+}
+
+.patient-banner h2 {
+margin: 0 0 7px;
+}
+
+.patient-banner p {
+margin: 0;
+line-height: 1.6;
+}
+
+.section-title {
+margin: 30px 0 18px;
+color: #37474f;
+}
+
+.dashboard-cards {
+display: flex;
+gap: 22px;
+align-items: stretch;
+}
+
+.dashboard-card {
+flex: 1;
+background: white;
+padding: 28px;
+border-radius: 18px;
+box-shadow: 0 8px 25px rgba(0, 80, 120, 0.10);
+transition: 0.3s;
+}
+
+.dashboard-card:hover {
+transform: translateY(-6px);
+box-shadow: 0 15px 35px rgba(0, 80, 120, 0.17);
+}
+
+.card-icon {
+font-size: 40px;
+margin-bottom: 12px;
+}
+
+.dashboard-card h3 {
+margin: 0 0 10px;
+color: #087f8c;
+font-size: 21px;
+}
+
+.dashboard-card p {
+color: #607d8b;
+line-height: 1.6;
+min-height: 75px;
+}
+
+.dashboard-card a {
+display: inline-block;
+margin-top: 10px;
+padding: 11px 17px;
+background: #087f8c;
+color: white;
+border-radius: 8px;
+text-decoration: none;
+font-weight: bold;
+}
+
+.dashboard-card a:hover {
+background: #066b76;
+}
+
+.available {
+display: inline-block;
+margin-top: 10px;
+color: #2e9d62;
+font-weight: bold;
+}
+
+.health-tip {
+margin-top: 25px;
+padding: 20px 25px;
+background: white;
+border-left: 5px solid #087f8c;
+border-radius: 12px;
+box-shadow: 0 6px 20px rgba(0, 80, 120, 0.08);
+display: flex;
+align-items: center;
+gap: 18px;
+}
+
+.tip-icon {
+font-size: 35px;
+}
+
+.health-tip h3 {
+margin: 0 0 5px;
+color: #087f8c;
+}
+
+.health-tip p {
+margin: 0;
+color: #607d8b;
+}
+
+.dashboard-footer {
+text-align: center;
+margin-top: 30px;
+color: #78909c;
+font-size: 14px;
+}
+
+@media (max-width: 800px) {
+
+.dashboard-cards {
+    flex-direction: column;
+}
+
+.dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.patient-banner {
+    flex-direction: column;
+    text-align: center;
+}
+
+
+}
+/* view patient appointment  */
+
+.appointment-intro {
+margin-top: 25px;
+padding: 25px 30px;
+background: white;
+border-radius: 18px;
+box-shadow: 0 8px 25px rgba(0, 80, 120, 0.10);
+display: flex;
+align-items: center;
+gap: 18px;
+}
+
+.appointment-icon {
+font-size: 42px;
+}
+
+.appointment-intro h2 {
+margin: 0 0 6px;
+color: #087f8c;
+}
+
+.appointment-intro p {
+margin: 0;
+color: #607d8b;
+}
+
+.appointment-table-container {
+margin-top: 25px;
+background: white;
+padding: 20px;
+border-radius: 18px;
+box-shadow: 0 8px 25px rgba(0, 80, 120, 0.10);
+overflow-x: auto;
+}
+
+.appointment-table {
+width: 100%;
+border-collapse: collapse;
+}
+
+.appointment-table th {
+background: #087f8c;
+color: white;
+padding: 15px;
+text-align: left;
+}
+
+.appointment-table td {
+padding: 15px;
+border-bottom: 1px solid #e0e6e8;
+color: #455a64;
+}
+
+.appointment-table tr:hover {
+background: #f4fbfc;
+}
+
+.status-badge {
+display: inline-block;
+padding: 7px 13px;
+border-radius: 20px;
+background: #fff3cd;
+color: #856404;
+font-weight: bold;
+font-size: 13px;
+}
+
+.no-appointments {
+text-align: center;
+padding: 35px !important;
+color: #78909c !important;
+font-size: 16px;
+}
+
+.appointment-actions {
+margin-top: 25px;
+display: flex;
+align-items: center;
+gap: 15px;
+}
+
+.small-btn {
+display: inline-block;
+width: auto;
+padding: 11px 18px;
+}
+
+.back-link {
+color: #087f8c;
+text-decoration: none;
+font-weight: bold;
+}
+
+.back-link:hover {
+text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+
+
+.appointment-intro {
+    flex-direction: column;
+    text-align: center;
+}
+
+.appointment-actions {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
+}
+
+
+.appointment-actions {
+margin-top: 25px;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 15px;
+}
+
+.book-btn {
+display: inline-block;
+padding: 12px 20px;
+background: #087f8c;
+color: white;
+border-radius: 9px;
+text-decoration: none;
+font-weight: bold;
+}
+
+.book-btn:hover {
+background: #066b76;
+}
+
+.back-dashboard-btn {
+display: inline-block;
+padding: 12px 20px;
+background: white;
+color: #087f8c;
+border: 2px solid #087f8c;
+border-radius: 9px;
+text-decoration: none;
+font-weight: bold;
+}
+
+.back-dashboard-btn:hover {
+background: #e8f9fb;
+}
+
+@media (max-width: 700px) {
+
+.appointment-actions {
+    flex-direction: column;
+}
+
+.book-btn,
+.back-dashboard-btn {
+    width: 100%;
+    text-align: center;
+}
+
+}
+
+.booking-box {
+max-width: 600px;
+margin: 30px auto;
+padding: 30px;
+background: white;
+border-radius: 20px;
+box-shadow: 0 10px 30px rgba(0, 80, 120, 0.12);
+}
+
+.booking-title {
+display: flex;
+align-items: center;
+gap: 18px;
+margin-bottom: 25px;
+}
+
+.booking-icon {
+width: 65px;
+height: 65px;
+border-radius: 50%;
+background: #e8f9fb;
+color: #087f8c;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: bold;
+font-size: 13px;
+}
+
+.booking-title h2 {
+margin: 0 0 6px;
+color: #087f8c;
+}
+
+.booking-title p {
+margin: 0;
+color: #607d8b;
+line-height: 1.5;
+}
+
+.booking-box label {
+display: block;
+margin-top: 18px;
+margin-bottom: 7px;
+color: #455a64;
+font-weight: bold;
+}
+
+.booking-box select,
+.booking-box input[type="date"],
+.booking-box input[type="time"] {
+width: 100%;
+padding: 12px;
+border: 1px solid #cfd8dc;
+border-radius: 9px;
+font-size: 14px;
+outline: none;
+}
+
+.booking-box select:focus,
+.booking-box input:focus {
+border-color: #087f8c;
+box-shadow: 0 0 5px rgba(8, 127, 140, 0.2);
+}
+
+.book-appointment-btn {
+width: 100%;
+margin-top: 25px;
+padding: 13px;
+border: none;
+border-radius: 9px;
+background: linear-gradient(135deg, #087f8c, #13a8b5);
+color: white;
+font-size: 15px;
+font-weight: bold;
+cursor: pointer;
+}
+
+.book-appointment-btn:hover {
+transform: translateY(-2px);
+box-shadow: 0 7px 18px rgba(8, 127, 140, 0.25);
+}
+
+.booking-actions {
+display: flex;
+justify-content: center;
+gap: 15px;
+margin-top: 20px;
+}
+
+@media (max-width: 700px) {
+
+
+.booking-box {
+    width: 95%;
+    padding: 22px;
+}
+
+.booking-title {
+    flex-direction: column;
+    text-align: center;
+}
+
+.booking-actions {
+    flex-direction: column;
+    align-items: center;
+}
+
+
+}
+
+
+.accept-btn {
+    background: #2e8b57;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.accept-btn:hover {
+    background: #246b45;
+}
+
+.reject-btn {
+    background: #c0392b;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.reject-btn:hover {
+    background: #962d22;
+}
+
+
+.booking-error-container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.booking-error-card {
+    width: 450px;
+    padding: 40px;
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.booking-error-card h2 {
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.booking-error-card p {
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.booking-error-card .back-dashboard-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+}
+
